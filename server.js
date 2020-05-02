@@ -7,7 +7,10 @@ const app = express();
 
 /*var corsOptions = {
   origin: "http://localhost:8081"
-};*/
+};
+
+app.use(cors(corsOptions));
+*/
 
 var allowedOrigins = ['http://localhost:3000',
                       'https://engrcollins.github.io/'];
@@ -24,8 +27,6 @@ app.use(cors({
     return callback(null, true);
   }
 }));
-
-app.use(cors(corsOptions));
 
 // parse requests of content-type: application/json
 app.use(bodyParser.json());
