@@ -31,10 +31,10 @@ app.use(bodyParser.json());
 // parse requests of content-type: application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, 'build')));
-+app.get('/*', function (req, res) {
+/*app.use(express.static(path.join(__dirname, 'build')));
+app.get('/*', function (req, res) {
    res.sendFile(path.join(__dirname, 'build', 'index.html'));
- });
+ });*/
 
 // simple route
 app.get("/", (req, res) => {
