@@ -59,7 +59,7 @@ Customer.getAll = result => {
 
 Customer.updateById = (id, customer, result) => {
   sql.query(
-    "UPDATE customers SET title = ?, description = ?, category = ?, source = ?, URL = ?, authour = ?, tags = ?, published = ? WHERE id = ?",
+    "UPDATE customers SET title = ?, description = ?, category = ?, source = ?, URL = ?, author = ?, tags = ?, published = ? WHERE id = ?",
     [customer.title, customer.description, customer.category, customer.source, customer.URL, customer.author, customer.tags, customer.published, id],
     (err, res) => {
       if (err) {
