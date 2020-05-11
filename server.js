@@ -12,7 +12,7 @@ const app = express();
 app.use(cors(corsOptions));
 */
 
-var whitelist = ['http://localhost:3000', 'http://desktop-hdv5l9a', 'https://engrcollins.github.io', 'dev-catalog.netlify.app'];
+var whitelist = ['http://localhost:3000', 'http://desktop-hdv5l9a', 'https://engrcollins.github.io', 'https://dev-catalog.netlify.app'];
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
